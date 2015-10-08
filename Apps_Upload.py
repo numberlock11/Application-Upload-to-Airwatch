@@ -42,12 +42,12 @@ while x < 308:
         appnamein = "'" + appname + "'"
         
         # Hardcoded LocationgroupId  and Pushmode (other option is "Auto")
-        parameters = '{"ApplicationName":%s,"BundleId":%s,"ExternalId":%s,"Platform":2,"LocationGroupId":2459,"PushMode":"OnDemand"}' %(appnamein, bundlein, apps[x+1]['ExternalId'])
+        parameters = '{"ApplicationName":%s,"BundleId":%s,"ExternalId":%s,"Platform":2,"LocationGroupId":####,"PushMode":"OnDemand"}' %(appnamein, bundlein, apps[x+1]['ExternalId'])
 
         print parameters
         
         # Hardcoded the URL of the environment to upload and the Admin creds
-        response = requests.post('https://cn239.awmdm.com/API/v1/mam/apps/public', headers = headers, data = parameters, auth =('airwatch12','airwatch12'))
+        response = requests.post('https://####.awmdm.com/API/v1/mam/apps/public', headers = headers, data = parameters, auth =('####','####'))
 
         print response
         x+=1
